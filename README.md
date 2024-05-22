@@ -11,11 +11,11 @@ npm install react-native-start-of-week
 ## Usage
 
 ```js
-import { multiply } from 'react-native-start-of-week';
+import { getFirstWeekDay } from 'react-native-start-of-week';
 
 // ...
 
-const result = await multiply(3, 7);
+const result = await getFirstWeekDay();
 ```
 
 ## Contributing

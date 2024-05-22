@@ -1,18 +1,18 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-start-of-week';
+import { getFirstWeekDay, WeekDay } from 'react-native-start-of-week';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const [firstWeekDay, setFirstWeekDay] = React.useState<WeekDay | undefined>();
 
   React.useEffect(() => {
-    multiply(3, 7).then(setResult);
+    getFirstWeekDay().then(setFirstWeekDay);
   }, []);
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>First week day: {firstWeekDay}</Text>
     </View>
   );
 }

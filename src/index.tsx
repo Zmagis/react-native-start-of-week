@@ -17,6 +17,17 @@ const StartOfWeek = NativeModules.StartOfWeek
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return StartOfWeek.multiply(a, b);
+export enum WeekDay {
+  Sunday = 'SUNDAY',
+  Monday = 'MONDAY',
+  Tuesday = 'TUESDAY',
+  Wednesday = 'WEDNESDAY',
+  Thursday = 'THURSDAY',
+  Friday = 'FRIDAY',
+  Saturday = 'SATURDAY',
+  Unknown = 'UNKNOWN',
+}
+
+export function getFirstWeekDay(): Promise<WeekDay> {
+  return StartOfWeek.getFirstWeekDay();
 }
